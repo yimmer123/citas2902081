@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="14.10" multi-file="no" uid="simpfd052fc0d822476bbae1092430384dcf" creation-date="02/23/2024 08:28:46">
+  <meta>
+    <name>citas</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>1</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>1</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="package" type="Package" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="Class" />
+        <value>2</value>
+      </counter>
+      <counter>
+        <item-type type-id="property" type="Property" />
+        <value>2</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.OperationField</type>
+        <value>3</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-be019c75234d4dcfaa5cc2588f8f3a68" name="" task-id-sequence="0">
+    <persons>
+      <person id="">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-fb2699de7c0c43e9af4707bcbe9cb921" name="" order-index="-1" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <parameters />
+      <types />
+    </custom-types>
+  </types>
+  <items />
+  <models>
+    <model id="pb487d5035fa646909fbba6fd350b4439_265421284" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>02/23/2024 08:28:47</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p9fd358a9dc114bae9f3043584a376537_132573618" name="ClassDiagram1" order-index="1" uid="" auto-routed-paths="false" default-line-style="default" view-location="0,-90">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>02/23/2024 08:28:47</creation-date>
+          <change-date>02/23/2024 08:30:59</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="e480352e7c74465abe7465d4ea77c667" cid="PROP001" type="property" name="id" owner="7943e035161a49c2a58f0492621aacc1" creator="" creation-date="02/23/2024 08:31:35" visibility="private">
+            <property />
+          </item>
+          <item id="a6a8e36aa3cd4293aa0d998135898caa" cid="PKG001" type="package" name="entities" creator="" creation-date="02/23/2024 08:30:28">
+            <owned-items />
+          </item>
+          <item id="7943e035161a49c2a58f0492621aacc1" cid="C001" type="class" name="Medico" owner="a6a8e36aa3cd4293aa0d998135898caa" creator="" creation-date="02/23/2024 08:30:59">
+            <owned-items />
+            <attributes>
+              <attribute id="ad56ae287e13945c1a959ddd359c30d81728" cid="PROP001" name="id" creation-date="02/23/2024 08:31:35" property-ref="e480352e7c74465abe7465d4ea77c667" />
+            </attributes>
+            <operations>
+              <operation id="oa8b5fa13014b407cbfb9324ee31f4966940" cid="OP001" name="GetId" creation-date="02/23/2024 08:33:51" type="" type-id="" visibility="public">
+                <stereotypes>
+                  <stereotype>getter</stereotype>
+                </stereotypes>
+              </operation>
+              <operation id="o85b76c0eadd44ef1bf5503c8121e1ffe941" cid="OP002" name="SetId" creation-date="02/23/2024 08:33:51" type="" type-id="" visibility="public">
+                <parameters>
+                  <parameter id="pfaf12b015cfd403bba074e0367c7214c" name="id" type="" type-id="" creation-date="02/23/2024 08:33:51" />
+                </parameters>
+                <stereotypes>
+                  <stereotype>setter</stereotype>
+                </stereotypes>
+              </operation>
+            </operations>
+          </item>
+        </abstract-items>
+        <layer id="7748e9ebb306467a97167d4476f56005" name="Default" visible="true" enabled="true" locked="false">
+          <item id="a6a8e36aa3cd4293aa0d998135898caa" iid="df62a5d721334843801cba90978eaf78" creation-date="02/23/2024 08:30:28" order-index="0" type="entity">
+            <layout ax="180" ay="60" awidth="300" aheight="299" x="180" y="60" width="300" height="299" expanded="180,60,300,299" collapsed="180,60,88,56" />
+            <package name-in-body="false" />
+          </item>
+          <item id="7943e035161a49c2a58f0492621aacc1" iid="817fae25c63d4e0894b63d3bda4e7c23" container="a6a8e36aa3cd4293aa0d998135898caa" container-iid="df62a5d721334843801cba90978eaf78" show-fields="true" creation-date="02/23/2024 08:30:59" order-index="1" type="entity">
+            <layout ax="180" ay="119" awidth="140" aheight="160" x="180" y="119" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
