@@ -1,13 +1,11 @@
 package org.ptech.citas.entities;
 import java.time.LocalDate;
 
-public class Paciente {
+import org.ptech.citas.entities.enums.TipoDocumento;
+import org.ptech.citas.entities.enums.TipoSangre;
 
-   private int id; 
-   private String nombres; 
-    private String apellidos;
-   private TipoDocumento tipoDocumento;
-   private Long numeroDocumento;
+public class Paciente extends Usuario {
+
    private String email;
    private Long celular;
    private LocalDate fechaNacimiento;
@@ -15,16 +13,11 @@ public class Paciente {
    private Double peso;
    private TipoSangre tipoSangre;
    private char factorRH;
-public Paciente() {
-}
 public Paciente(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento,
         String email, Long celular, LocalDate fechaNacimiento, Double altura, Double peso, TipoSangre tipoSangre,
         char factorRH) {
-    this.id = id;
-    this.nombres = nombres;
-    this.apellidos = apellidos;
-    this.tipoDocumento = tipoDocumento;
-    this.numeroDocumento = numeroDocumento;
+            
+    super(id, nombres, apellidos, tipoDocumento, numeroDocumento);
     this.email = email;
     this.celular = celular;
     this.fechaNacimiento = fechaNacimiento;
@@ -32,36 +25,6 @@ public Paciente(int id, String nombres, String apellidos, TipoDocumento tipoDocu
     this.peso = peso;
     this.tipoSangre = tipoSangre;
     this.factorRH = factorRH;
-}
-public int getId() {
-    return id;
-}
-public void setId(int id) {
-    this.id = id;
-}
-public String getNombres() {
-    return nombres;
-}
-public void setNombres(String nombres) {
-    this.nombres = nombres;
-}
-public String getApellidos() {
-    return apellidos;
-}
-public void setApellidos(String apellidos) {
-    this.apellidos = apellidos;
-}
-public TipoDocumento getTipoDocumento() {
-    return tipoDocumento;
-}
-public void setTipoDocumento(TipoDocumento tipoDocumento) {
-    this.tipoDocumento = tipoDocumento;
-}
-public Long getNumeroDocumento() {
-    return numeroDocumento;
-}
-public void setNumeroDocumento(Long numeroDocumento) {
-    this.numeroDocumento = numeroDocumento;
 }
 public String getEmail() {
     return email;
@@ -105,7 +68,6 @@ public char getFactorRH() {
 public void setFactorRH(char factorRH) {
     this.factorRH = factorRH;
 }
-
 
    
 }

@@ -1,90 +1,48 @@
 package org.ptech.citas.entities;
+import org.ptech.citas.entities.enums.Especialidad;
+import org.ptech.citas.entities.enums.TipoDocumento;
 
-public class Medico {
-   //POR REGLA GENERAL:
-   // Los atributos de una clase
-   // deben ser private
-   private int id; 
-   private String nombres; 
-   private String apellidos;
-   private TipoDocumento tipoDocumento;
-   private Long numeroDocumento;
+//clases que heradan:
+// - clases hijas
+// - subclases
+// - clases detalle
+// - clases especificas 
+
+public class Medico extends Usuario {
+   
    private Long registroMedico;
    private Especialidad especialidad;
 
-//constructor por defecto
-//siempre debe ser public
-   public Medico() {
+public Medico(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento, Long registroMedico, Especialidad especialidad) {
+    //Si quieres instanciar un medico 
+    //Tambien debes instanciar el usuario
+    //super en el constructor invoca(llama, ejecuta)
+    //al constructor de la clase padre(superclase)
+    //debe ser llamada al constructor de la superclase
+    //debe ser la primera que aprezaca en el constructor de la clase hija
 
-}
-
-//constructor parametrizado
-
-public Medico(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroDocumento,
-        Long registroMedico, Especialidad especialidad) {
-    this.id = id;
-    this.nombres = nombres;
-    this.apellidos = apellidos;
-    this.tipoDocumento = tipoDocumento;
-    this.numeroDocumento = numeroDocumento;
+    super(id, nombres, apellidos, tipoDocumento, numeroDocumento);
+     // a continuacion inicializamos
+    //atributos propios de la clase hija
     this.registroMedico = registroMedico;
     this.especialidad = especialidad;
 }
-//Getters y Setters 
-//deben ser publicos
-// Firma de un Getter:
-// Tipo de dato de retorno:
-//           es el t.d del atributo
-//Nombre del metodo:
-//           get seguido del nombre del atributo  
-//Parametros: 0
-//Retorna: El valor del atributo  
 
-public String getNombres() {
-    //return sirve para 
-    //retornar el valor 
-    //al invocar
-    return this.nombres;
-}
-//Setter: sirve para asignar un valor al atributo asignado
-//Firma de un Setter:
-// - Tipo de dato de retorno: void
-// - Nombre: set seguido del nombre del atributo
-// - Parametros: 1, input del valor a asignar al atributo
-// - Retorna: nada 
-public void setNombres(String nombres) {
-    this.nombres = nombres;
+public Long getRegistroMedico() {
+    return registroMedico;
 }
 
-public String getApellidos() {
-    return apellidos;
+public void setRegistroMedico(Long registroMedico) {
+    this.registroMedico = registroMedico;
 }
 
-public void setApellidos(String apellidos) {
-    this.apellidos = apellidos;
+public Especialidad getEspecialidad() {
+    return especialidad;
 }
 
-public TipoDocumento getTipoDocumento() {
-    return tipoDocumento;
+public void setEspecialidad(Especialidad especialidad) {
+    this.especialidad = especialidad;
 }
-
-public void setTipoDocumento(TipoDocumento tipoDocumento) {
-    this.tipoDocumento = tipoDocumento;
-}
-
-public Long getNumeroDocumento() {
-    return numeroDocumento;
-}
-
-public void setNumeroDocumento(Long numeroDocumento) {
-    this.numeroDocumento = numeroDocumento;
-}
-
-
-
-
 
    
-
-
 }
