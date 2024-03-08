@@ -26,6 +26,12 @@ public Medico(int id, String nombres, String apellidos, TipoDocumento tipoDocume
     //atributos propios de la clase hija
     this.registroMedico = registroMedico;
     this.especialidad = especialidad;
+
+}
+
+@Override
+public String toString() {
+    return "Medico [registroMedico=" + registroMedico + ", especialidad=" + especialidad + ", nombre: " + super.nombres + "]" ;
 }
 
 public Long getRegistroMedico() {

@@ -4,9 +4,17 @@ public class Consultorio {
     private int id;
     private String dirreccion;
      private int numero;
+
+     
     
     
-     public Consultorio() {
+     @Override
+    public String toString() {
+        return "Consultorio [id=" + id + ", dirreccion=" + dirreccion + ", numero=" + numero + "]";
+    }
+
+
+    public Consultorio() {
     }
 
 

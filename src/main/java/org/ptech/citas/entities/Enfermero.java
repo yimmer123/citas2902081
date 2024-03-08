@@ -14,9 +14,16 @@ public class Enfermero extends Usuario {
         super(id, nombres, apellidos, tipoDocumento, numeroDocumento);
         //2 inicializar atributos intrinsecos
         this.procedimientos = new ArrayList<String>();
+
+        
 }
 
- public void addProcedure(String procedure){
+ @Override
+    public String toString() {
+        return "Enfermero [procedimientos=" + procedimientos + "nombre:" + super.nombres + " apellido: " + super.apellidos + " numerodocumento:" + super.numeroDocumento + "]" ;
+    }
+
+public void addProcedure(String procedure){
     //añadir el string procedimiento 
     //a la lista de procedimientos
     this.procedimientos.add(procedure);
