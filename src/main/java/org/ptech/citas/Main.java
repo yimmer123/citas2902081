@@ -1,9 +1,19 @@
 package org.ptech.citas;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+
+import org.ptech.citas.entities.Cita;
+import org.ptech.citas.entities.CitaMedico;
+import org.ptech.citas.entities.Consultorio;
 import org.ptech.citas.entities.Enfermero;
 import org.ptech.citas.entities.Medico;
+import org.ptech.citas.entities.Paciente;
 import org.ptech.citas.entities.enums.Especialidad;
+import org.ptech.citas.entities.enums.EstadoCita;
 import org.ptech.citas.entities.enums.TipoDocumento;
+import org.ptech.citas.entities.enums.TipoSangre;
 
 
 public class Main {
@@ -11,19 +21,80 @@ public class Main {
         
         //crear un medico
          Medico m1 = new Medico(1, "mariana" , "castellanos" , TipoDocumento.CC , 1031807942L, 15541552L, Especialidad.CARDIOLOGIA);
-    System.out.println(" id del medico: " + m1.getId() + " nombre del medico: " + m1.getNombres() + " apellido del medico: " + m1.getApellidos()) ;
+    System.out.println(" id del medico1: " + m1.getId() + " nombre del medico: " + m1.getNombres() + " apellido del medico: " + m1.getApellidos()) ;
+
+    Medico m2 = new Medico(2, "yimmer" , "guzman" , TipoDocumento.CC , 983642367L, 143639L, Especialidad.MEDICINA_GENERAL);
+    System.out.println(" id del medico2: " + m2.getId() + " nombre del medico: " + m2.getNombres() + " apellido del medico: " + m2.getApellidos()) ;
+
+
+
+
+    Paciente p1 = new Paciente(3, "sofia", " gonzales", TipoDocumento.CE, 782549L, " sofia123@gmail.com", 314527759L, LocalDate.of(2018, 04, 4), 1.20, 39.0, TipoSangre.B, '+');
+    System.out.println(" id del paciente1 : " + p1.getId() + " nombre del paciente: " + p1.getNombres() + " apellido del paciente: "  + p1.getApellidos() + " tipo de documento: " + p1.getTipoDocumento() + " numero de documento: " + p1.getNumeroDocumento());
     
+    Paciente p2 = new Paciente(4, "laura", " joya", TipoDocumento.CC, 16543872L, " joya2123@gmail.com", 6143916432L, LocalDate.of(2006, 06, 4), 1.60, 58.0, TipoSangre.B, '-');
+    System.out.println(" id del paciente2 : " + p2.getId() + " nombre del paciente: " + p2.getNombres() + " apellido del paciente: "  + p2.getApellidos() + " tipo de documento: " + p2.getTipoDocumento() + " numero de documento: " + p2.getNumeroDocumento());
+    
+    Paciente p3 = new Paciente(5, "Julian", " londoño", TipoDocumento.TI, 6287923L, " londoño42123@gmail.com", 346236356L, LocalDate.of(2006, 8, 9), 1.80, 60.0, TipoSangre.A, '+');
+    System.out.println(" id del paciente3 : " + p3.getId() + " nombre del paciente: " + p3.getNombres() + " apellido del paciente: "  + p3.getApellidos() + " tipo de documento: " + p3.getTipoDocumento() + " numero de documento: " + p3.getNumeroDocumento());
+     
+    Paciente p4 = new Paciente(7, "Arley", " ruiz", TipoDocumento.TI, 12351235L, " ruiz123@gmail.com", 45725756L, LocalDate.of(2006, 8, 24), 1.82, 60.0, TipoSangre.AB, '+');
+    System.out.println(" id del paciente4 : " + p4.getId() + " nombre del paciente: " + p4.getNombres() + " apellido del paciente: "  + p4.getApellidos() + " tipo de documento: " + p4.getTipoDocumento() + " numero de documento: " + p4.getNumeroDocumento());
+    
+    Paciente p5 = new Paciente(6, "david", " perez", TipoDocumento.CC, 214235346L, " david2123@gmail.com", 474245724L, LocalDate.of(2005, 07, 7), 1.60, 58.0, TipoSangre.B, '-');
+    System.out.println(" id del paciente5 : " + p5.getId() + " nombre del paciente: " + p5.getNombres() + " apellido del paciente: "  + p5.getApellidos() + " tipo de documento: " + p5.getTipoDocumento() + " numero de documento: " + p5.getNumeroDocumento());
+    
+
+    
+
+
+
 
     //crear un Enfermero:
     Enfermero e1 = new Enfermero(1, " brayan " , " morales" , TipoDocumento.PPT, 1546246L);
     //Añadir dos procedimientos al enfermero
     e1.addProcedure(" Aplicar inyecciones ");
     e1.addProcedure(" Lavado de oidos ");
+    System.out.println(" nombre del enfermero: " + e1.getNombres() + "apellido: " + e1.getApellidos() + " numero de documento: " + e1.getNumeroDocumento());
     //recorrer los procedimientos de e1
     for( String p : e1.getProcedimientos()){
-        System.out.println(" procedimiento: " + p);
+        System.out.println(" procedimiento1 del enfermero: " + p);
+       
+       
+        Enfermero e3 = new Enfermero(1, " jose " , " martinez" , TipoDocumento.CE, 1647539L);
+        //Añadir dos procedimientos al enfermero
+        e3.addProcedure(" Aplicar inyecciones ");
+        e3.addProcedure(" Lavado de oidos ");
+        System.out.println(" nombre del enfermero: " + e3.getNombres() + "apellido: " + e3.getApellidos() + " numero de documento: " + e3.getNumeroDocumento());
+        //recorrer los procedimientos de e1
+        for( String s : e3.getProcedimientos()){
+            System.out.println(" procedimiento1: " + s);
 
     }
+    Enfermero e2 = new Enfermero(2, " felipe" , " reyes" , TipoDocumento.CE, 1353246L);
+    //Añadir dos procedimientos al enfermero
+    e2.addProcedure(" Aplicar inyecciones ");
+    e2.addProcedure(" Lavado de oidos ");
+    System.out.println(" nombre del enfermero: " + e2.getNombres() + "apellido: " + e2.getApellidos() + " numero de documento: " + e2.getNumeroDocumento());
+    //recorrer los procedimientos de e1
+    for( String f : e2.getProcedimientos()){
+        System.out.println(" procedimiento2: " + f);
+
+
+
+    }
+
+    Consultorio s1 = new Consultorio(4, "calle127 f· 93-15", 4);
+    
+
+    CitaMedico c1 = new CitaMedico(3,LocalDateTime.of(2024, Month.APRIL, 13, 12, 24, 46),  s1, EstadoCita.AGENDADA ,p1, "Gripe" );
+    System.out.println("fecha cita1: " + c1.getFecha() + " " + c1.getConsultorio() + " Nombre del medico: " + m1.getNombres() + " apellido: " + m1.getApellidos() + " Estado: "+ c1.getEstado());
+    CitaMedico c2 = new CitaMedico(4,LocalDateTime.now(),  s1, EstadoCita.AGENDADA,p5, "Escopolomina" );
+    System.out.println("fecha cita2: " + c2.getFecha() + " Consultorio: " + c2.getConsultorio() + " Nombre del medico: " + m2.getNombres() + " apellido: " + m2.getApellidos() + " Estado: "+ c2.getEstado());
+
+    c1.cancelarCita();
+    System.out.println("cita cancelada " + c1.cancelarCita());
+}
     }
 
 
